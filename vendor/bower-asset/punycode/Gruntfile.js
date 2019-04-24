@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 				'command': 'echo "Testing in Node..."; node "tests/tests.js"'
 			},
 			'test-browser': {
-				'command': 'echo "Testing in a browser..."; open "tests/index.html"'
+				'command': 'echo "Testing in a browser..."; open "tests/index.php"'
 			}
 		}
 	});

@@ -24,7 +24,7 @@ class FilterTest extends \Codeception\Test\Unit
                 'blacklist' => [
                     'include' => [
                         'tests/*',
-                        'vendor/*/*Test.php',
+                        'vendor/*/*TestModelModel.php',
                         'src/Codeception/Codecept.php'
                     ],
                     'exclude' => [
@@ -51,7 +51,7 @@ class FilterTest extends \Codeception\Test\Unit
                 'whitelist' => [
                     'include' => [
                         'tests/*',
-                        'vendor/*/*Test.php',
+                        'vendor/*/*TestModelModel.php',
                         'src/Codeception/Codecept.php'
                     ],
                     'exclude' => [

@@ -195,7 +195,7 @@ As in scenario-driven functional or acceptance tests you can access Actor class 
 If you write integration tests, it may be useful to include the `Db` module for database testing.
 
 ```yaml
-# Codeception Test Suite Configuration
+Test
 
 # suite for unit (internal) tests.
 actor: UnitTester

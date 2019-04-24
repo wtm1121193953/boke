@@ -10,8 +10,12 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
-AppAsset::register($this);
+//AppAsset::register($this);
 ?>
+
+<?php die; ?>
+
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">

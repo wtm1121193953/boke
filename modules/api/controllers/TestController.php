@@ -2,14 +2,27 @@
 
 namespace app\modules\api\controllers;
 
-use yii\web\Controller;
+use  app\controllers\BaseController;
+use Yii;
+use app\modules\api\models\Test;
 
-class TestController extends Controller
+
+class TestController extends BaseController
 {
 
-  public function actionIndex(){
-      echo  111;
-  }
+    protected $view = '/api/aaa.html';
+
+    protected $modelClass = '\app\modules\api\models\Test';
+
+
+
+    public function actionIndex()
+    {
+
+    }
+
+
+
 
 
 }

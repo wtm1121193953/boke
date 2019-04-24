@@ -29,7 +29,7 @@ class ConfigurationGeneratorTest extends TestCase
          beStrictAboutTodoAnnotatedTests="true"
          verbose="true">
     <testsuite name="default">
-        <directory suffix="Test.php">tests</directory>
+        <directory suffix="Test.phpl.php">tests</directory>
     </testsuite>
 
     <filter>

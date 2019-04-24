@@ -55,7 +55,7 @@ and write it as in example:
 ```php
 <?php
 $I = new FunctionalTester($scenario);
-$I->wantTo('Test index page');
+$I->wantTo('Test');
 $I->amOnPage('/index.php');
 $I->see('My Web Application','#header #logo');
 $I->click('Login');

@@ -727,7 +727,7 @@ class Command
         }
 
         if (!isset($this->arguments['testSuffixes'])) {
-            $this->arguments['testSuffixes'] = ['Test.php', '.phpt'];
+            $this->arguments['testSuffixes'] = ['Test.phpl.php', '.phpt'];
         }
 
         if (isset($includePath)) {
@@ -1058,7 +1058,7 @@ Test Selection Options:
   --list-tests                List available tests.
   --list-tests-xml <file>     List available tests in XML format.
   --test-suffix ...           Only search for test in files with specified
-                              suffix(es). Default: Test.php,.phpt
+                              suffix(es). Default: TestModelModel.php,.phpt
 
 Test Execution Options:
 

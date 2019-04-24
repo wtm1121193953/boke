@@ -141,7 +141,7 @@ before_script:
 # Run webserver
 - php -S localhost:8085 --docroot public &>/dev/null&
 
-# Test
+Test
 test:
   script:
   - vendor/bin/codecept run

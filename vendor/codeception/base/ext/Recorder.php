@@ -16,7 +16,7 @@ use Codeception\Util\Template;
  * Saves a screenshot of each step in acceptance tests and shows them as a slideshow on one HTML page (here's an [example](http://codeception.com/images/recorder.gif))
  * Activated only for suites with WebDriver module enabled.
  *
- * The screenshots are saved to `tests/_output/record_*` directories, open `index.html` to see them as a slideshow.
+ * The screenshots are saved to `tests/_output/record_*` directories, open `index.php` to see them as a slideshow.
  *
  * #### Installation
  *
@@ -325,7 +325,7 @@ EOF;
             ->place('carousel_class', $this->config['animate_slides'] ? ' slide' : '')
             ->produce();
 
-        $indexFile = $this->dir . DIRECTORY_SEPARATOR . 'index.html';
+        $indexFile = $this->dir . DIRECTORY_SEPARATOR . 'index.php';
         file_put_contents($indexFile, $html);
         $testName = Descriptor::getTestSignature($e->getTest()). ' - '.ucfirst($e->getTest()->getFeature());
         $this->recordedTests[$testName] = substr($indexFile, strlen(codecept_output_dir()));
