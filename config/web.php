@@ -1,7 +1,5 @@
 <?php
-
-$params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+//$db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
@@ -42,7 +40,6 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
             // Disable index.php
@@ -56,11 +53,10 @@ $config = [
         'api' => [
             'class' => 'app\modules\api\Module',
         ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
     ],
-
-
-
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {

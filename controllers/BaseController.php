@@ -15,8 +15,6 @@ use app\commands\code\ErrorCode;
 use yii\base\Exception;
 
 
-
-
 class BaseController extends Controller
 {
 
@@ -34,10 +32,6 @@ class BaseController extends Controller
 
     public function init()
     {
-
-        if($this->view) {
-            $this->disPlay($this->view);
-        }
 
         if($this->modelClass){
             if(!class_exists($this->modelClass)){
@@ -116,6 +110,12 @@ class BaseController extends Controller
     }
 
 
+
+    public function actionIndex(){
+        if($this->view) {
+            $this->disPlay($this->view);
+        }
+    }
 
 
 
