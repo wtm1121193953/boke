@@ -39,7 +39,7 @@ use yii\web\NotFoundHttpException;
  * use yii\web\Controller;
  * use yii\filters\HostControl;
  *
- * class TestController extends Controller
+ * class HomeController extends Controller
  * {
  *     public function behaviors()
  *     {

@@ -17,7 +17,7 @@ use yii\base\UserException;
  *
  * To use ErrorAction, you need to do the following steps:
  *
- * First, declare an action of ErrorAction type in the `actions()` method of your `TestController`
+ * First, declare an action of ErrorAction type in the `actions()` method of your `HomeController`
  * class (or whatever controller you prefer), like the following:
  *
  * ```php
@@ -52,7 +52,7 @@ class ErrorAction extends Action
 {
     /**
      * @var string the view file to be rendered. If not set, it will take the value of [[id]].
-     * That means, if you name the action as "error" in "TestController", then the view name
+     * That means, if you name the action as "error" in "HomeController", then the view name
      * would be "error", and the corresponding view file would be "views/site/error.php".
      */
     public $view;
