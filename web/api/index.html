@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="MrCoderStack，MrCoder技术栈，技术分享，技术交流">
+    <meta name="description" content="MrCoderStack，MrCoder技术栈，技术之路坎坷，没必要在同一个坑摔两次。">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="MrCoder技术栈|首页">
+    <meta property="og:url" content="http://www.wrsee.com">
+    <meta property="og:site_name" content="MrCoder技术栈">
+    <meta property="og:description" content="MrCoderStack，MrCoder技术栈，技术之路坎坷，没必要在同一个坑摔两次。">
+    <meta property="og:locale" content="zh-Hans">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MrCoder技术栈|首页">
+    <meta name="twitter:description" content="MrCoderStack，MrCoder技术栈，技术之路坎坷，没必要在同一个坑摔两次。">
+    <title>个人博客</title>
+
+    <style>
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    color: #555555;
+    background-color: #F5F5F5;
+    position: relative;
+
+}
+
+.header-inner {
+    width: 250px;
+    height: 50px;
+    float: left;
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.container {
+    width: 500px;
+    height: 50px;
+    float: left;
+    position: relative;
+    top: 22%;
+    left: 67%;
+    text-align: center;
+}
+
+.header-inner span {
+    font-size: 20px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.container li {
+    list-style: none;
+    padding: 0 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.container li a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 3px;
+}
+
+.title-up {
+    color: #555555;
+}
+
+.container li :hover {
+    background-color: #DCDCDC;
+}</style>
+    <link rel="stylesheet" href="/h+/css/font-awesome.min93e3.css" />
+    <style type="text/css">.main {
+    margin-top: 50px;
+}
+
+.content-wap {
+    margin: auto;
+    width: 900px;
+    height: 300px;
+    -webkit-box-shadow: 0 0 5px rgba(202, 203, 204, 0.5);
+    padding: 25px;
+}
+
+.title-line {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.title-line:hover {
+    color: #000000;
+    border-bottom: 2px solid black;
+}
+
+.content-mate {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #555555;
+}
+
+.content-wap p {
+    font-size: 16px;
+    color: #555555;
+}
+
+.read {
+    text-decoration: none;
+    padding: 0;
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #555555;
+    border-bottom: 2px solid #666;
+    transition-property: border
+}
+
+.read:hover {
+    color: #000000;
+}</style>
+</head>
+
+<body>
+<div class="header">
+    <div class="header-inner">
+        <span>MrCoder技术栈</span>
+    </div>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="javacript:void(0)">
+                    <i class="fa fa-fw fa-home"></i>
+                    <span class="title-up">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="javacript:void(0)">
+                    <i class="fa fa-fw fa-tags"></i>
+                    <span class="title-up">标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="javacript:void(0)">
+                    <i class="fa fa-fw fa-th"></i>
+                    <span class="title-up">分类</span>
+                </a></li>
+            <li>
+                <a href="javacript:void(0)">
+                    <i class="fa fa-fw fa-search "></i>
+                    <span class="title-up">搜索</span>
+                </a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="main">
+    <div class="content-wap">
+        <a href="#" class="title-line">springboot-搭建一个可以上线的项目结构-二</a>
+        <div class="content-mate">
+            <span>
+                <i class="fa fa-calendar-o"></i> &nbsp;
+                发表于2019-04-29 10:08:55
+            </span>
+            | &nbsp; &nbsp;
+            <span>
+                <i class="fa fa-folder-o"></i> &nbsp;
+                分类于 java
+            </span>
+            | &nbsp; &nbsp;
+            <span>
+                <i class="fa fa-comment-o"></i> &nbsp;
+                8
+            </span>
+            <br/>
+            <span>
+               <i class="fa fa-file-word-o"></i> &nbsp;
+               字数统计: 80362
+            </span>
+            &nbsp; &nbsp;
+            <span>
+                  <i class="fa fa-clock-o"></i> &nbsp;
+                阅读时长 ≈ 81
+            </span>
+        </div>
+        <p>
+            前言 通过前面的多章学习，相信大家对于springboot整合各个基础依赖已经得心应手了。并且，对于各个依赖的选择和使用都有了一定的理解。本章，将对前段时间的所学做一个总结，会完成一个可以上生产的项目基础架构。
+            首先，我们来归纳一下一般项目的需求： 多数据源 分布式事务 数据持久层 缓存 日志记录 druid数据源监控 api文档
+            以上需求基本囊括了所有项目的基础。那么我们，根据需求，对应我们的前几章所学，不难得出springboot+mybatis+多数据源+druid+atomikos+redis+log+swagger2
+            的搭配，另外，项目多环境的情况，还必须提供切换...
+        </p>
+        <a href="#" class="read">阅读全文»</a>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">/**
+ * Created by 13148872522 on 2019/5/29.
+ */
+console.log(3333)</script>
+</body>
+</html>
