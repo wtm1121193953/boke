@@ -14,4 +14,5 @@ class HomeController extends BaseController
     protected $view = '/admin/index.html';
 
 
+
 }

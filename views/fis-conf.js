@@ -1,7 +1,5 @@
 fis.match('::package', {
-    postpackager: fis.plugin('loader', {
-        allInOne: true
-    })
+    postpackager: fis.plugin('loader')
 });
 
 fis.match('*.less', {

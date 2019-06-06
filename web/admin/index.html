@@ -1,6 +1,21 @@
-<link href="/admin/header.html" rel="import">
-<html>
-<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>个人博客后台</title>
+    <meta name="keywords" content="个人博客后台">
+    <meta name="description" content="PHP个人博客后台">
+
+    <link  rel="stylesheet" href="/assets/h+/css/bootstrap.min14ed.css" />
+    <link  rel="stylesheet" href="/assets/h+/css/bootstrap.min.css" />
+    <link  rel="stylesheet" href="/assets/h+/css/font-awesome.min93e3.css" />
+    <link  rel="stylesheet" href="/assets/h+/css/style.min.css" />
+    <link  rel="stylesheet" href="/assets/h+/css/style.min862f.css" />
+</head>
+<body class="fixed-sidebar full-height-layout" style="overflow:hidden">
 <div id="wrapper">
     <!--左侧导航开始-->
     <nav class="navbar-default navbar-static-side" role="navigation">
@@ -10,7 +25,7 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" src="/h+/img/profile_small.jpg"/></span>
+                        <span><img alt="image" class="img-circle" src="/assets/h+/img/profile_small.jpg"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
@@ -42,7 +57,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="index_v1.html" data-index="0">主页示例一</a>
+                            <a class="J_menuItem" href="/admin/article/index" data-index="0">添加文章</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="index_v2.html">主页示例二</a>
@@ -85,7 +100,7 @@
         </div>
         <!--首页start-->
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="home.html"
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="home.html?__inline"
                     frameborder="0" data-id="index_v1.html" seamless></iframe>
         </div>
         <!--首页end-->
@@ -93,7 +108,15 @@
     <!--右侧部分结束-->
 </div>
 
-
+<script src="/assets/h+/js/jquery.min.js"></script>
+<script src="/assets/h+/js/plugins/layer/layer-3.0/layer-v3.1.1/layer/layer.js"></script>
+<script src="/assets/vue.min.js"></script>
+<script src="/assets/h+/js/bootstrap.min.js"></script>
+<script src="/assets/h+/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/assets/h+/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/assets/h+/js/plugins/layer/layer.min.js"></script>
+<script src="/assets/h+/js/hplus.min.js"></script>
+<script type="text/javascript" src="/assets/h+/js/contabs.min.js"></script>
+<script src="/assets/h+/js/plugins/pace/pace.min.js"></script>
 </body>
 </html>
-<link href="/admin/footer.html" rel="import">
