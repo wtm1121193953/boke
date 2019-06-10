@@ -25,7 +25,7 @@ class BaseController extends Controller
 
     protected $modelClass = '';
 
-    protected $view = null;
+    protected $viewFile = null;
 
     protected $model = null;
 
@@ -102,30 +102,73 @@ class BaseController extends Controller
     }
 
 
-    protected function disPlay($view = '')
+    protected function display($viewFile = '')
     {
-
-        if ($view) {
-            $file = ltrim($view, DIRECTORY_SEPARATOR);
+        if ($viewFile) {
+            $file = ltrim($viewFile, DIRECTORY_SEPARATOR);
         } else {
-            $file = ltrim($this->view, DIRECTORY_SEPARATOR);
+            $file = ltrim($this->viewFile, DIRECTORY_SEPARATOR);
         }
-        Yii::$app->viewPath = dirname(Yii::$app->viewPath, 1) . DIRECTORY_SEPARATOR . 'web';
-        $file = str_replace("\\", "/", Yii::$app->viewPath) . $file;
+        Yii::$app->viewPath = dirname(Yii::$app->viewPath, 1) . DIRECTORY_SEPARATOR . 'web' . DIRECTORY_SEPARATOR;
+        $file = Yii::$app->viewPath . $file;
         if (!is_file($file) || !is_readable($file)) {
-            throw new ErrorException('file not found' . $file);
+            throw new Exception('View file not found:' . $file);
         }
-        header('Last-Modified:' . gmdate('D,d M Y H:i:s') . 'GMT');
-        $html = file_get_contents($file);
+        $html = '';
+        $buffer = '';
+        $route = '';
+        $start = false;
+        $end = false;
+        $fh = fopen($file, 'r');
+        while (!feof($fh)) {
+            $line = fgets($fh);
+            if (strpos($line, '<!--@') === false) {
+                if ($start) {
+                    $buffer .= $line;
+                } else {
+                    $html .= $this->appendCsrfToken($line);
+                }
+            } else {
+                $match = trim(preg_replace('/.+@\s*(\S+).*-->/', '$1', $line));
+                if ($match == 'end') {
+                    $start = false;
+                    $end = true;
+                } else {
+                    $route = $match;
+                    $start = true;
+                    $end = false;
+                }
+            }
+            if ($end) {
+                if ($route && $this->checkRights($route)) {
+                    $html .= $this->appendCsrfToken($buffer);
+                }
+                $buffer = '';
+                $route = '';
+            }
+        }
+        fclose($fh);
+        header('Last-Modified:' . gmdate('D, d M Y H:i:s') . 'GMT');
         echo $html;
+        exit;
     }
 
 
     public function actionIndex()
     {
-        if ($this->view) {
-            $this->disPlay($this->view);
+        if ($this->viewFile) {
+            $this->disPlay($this->viewFile);
         }
+    }
+
+
+    protected function appendCsrfToken($html, $tag = 'body')
+    {
+        if (stripos(ltrim($html), '<' . $tag) !== 0) {
+            return $html;
+        }
+        $html .= PHP_EOL . '<script>var csrfToken="' . Yii::$app->request->getCsrfToken() . '"</script>' . PHP_EOL;
+        return $html;
     }
 
 

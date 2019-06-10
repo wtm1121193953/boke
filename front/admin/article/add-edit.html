@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <title>后台</title>
-    <meta name="keywords" content="个人博客后台">
-    <meta name="description" content="PHP个人博客后台">
-    <script src="/assets/h+/js/jquery.min.js?v=2.1.4"></script>
-    <script src="/assets/vue.min.js"></script>
-    <script src="/assets/axios.min.js"></script>
-    <script src="/assets/site.js"></script>
-    <script src="/assets/h+/js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="/assets/h+/js/plugins/layer/layer-3.0/layer-v3.1.1/layer/layer.js"></script>
-
-    <link rel="stylesheet" href="/assets/h+/css/bootstrap.min14ed.css" />
-    <link rel="stylesheet" href="/assets/h+/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/h+/css/font-awesome.min93e3.css" />
-    <link rel="stylesheet" href="/assets/h+/css/style.min.css" />
-    <link rel="stylesheet" href="/assets/h+/css/style.min862f.css" />
-    <link rel="stylesheet" href="/assets/h+/css/plugins/summernote/summernote.css" />
-    <link rel="stylesheet" href="/assets/h+/css/plugins/summernote/summernote-bs3.css" />
-</head>
-<body class="fixed-sidebar full-height-layout" style="overflow:hidden" id="site">
-<script src="/assets/h+/js/plugins/summernote/summernote.min.js"></script>
-<script src="/assets/h+/js/plugins/summernote/summernote-zh-CN.js"></script>
+<link href="../header.html?__inline" rel="import">
+<link href="../../assets/h+/css/plugins/summernote/summernote.css" rel="stylesheet">
+<link href="../../assets/h+/css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+<script src="../../assets/h+/js/plugins/summernote/summernote.min.js"></script>
+<script src="../../assets/h+/js/plugins/summernote/summernote-zh-CN.js"></script>
 
 
 <div class="ibox-content" id="admin">
@@ -67,21 +44,7 @@
     </form>
 </div>
 
-<script>var vm = new Vue({
-    el: "#admin",
-    data: {},
-    methods: {
-        submit: function () {
-            axios.post('/admin/article/test', {id:1}).then(function () {
-
-            });
-
-
-        }
-
-    }
-
-});</script>
+<script src="add-edit.js?__inline"></script>
 <script>
 
 
